@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Transaction details are:- </h2>
+    
+       <p>{ "block":{
+         "blockHeight":<%= result.blockNumber %> <br>
+    },<br>
+    "outs":[{<br>
+        "address":"<%= result.to %>",<br>
+        "value":"<%= result.value %>"<br>
+        "type":"token",<br>
+        "coinspecific":{<br>
+            "tokenAddress":""<br>
+        }
+    }],<br>
+    "ins":[{
+        "address":"<%= result.from %>",<br>
+        "value":"-<%= result.value %>",<br>
+        "type":"token",<br>
+        "coinspecific":{<br>
+            "tokenAddress":""<br>
+        }
+    }],<br>
+    
+    "currency":"ETH",<br>
+    "chain":"ETH.main",<br>
+    "state":"confirmed",<br>
+    depositType:"account"<br>
+}</p> 
+</body>
+</html>
